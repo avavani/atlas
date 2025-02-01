@@ -1,0 +1,32 @@
+/* assets/css/custom.css */
+.about-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.about-content {
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.experience-item {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+}
+
+.experience-item:last-child {
+    border-bottom: none;
+}
+
+.contact {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+}

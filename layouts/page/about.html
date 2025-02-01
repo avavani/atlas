@@ -1,0 +1,34 @@
+<!-- layouts/page/about.html -->
+{{ define "main" }}
+<article class="about-page">
+    <header class="about-header">
+        <h1>{{ .Title }}</h1>
+    </header>
+    
+    <div class="about-content">
+        {{ .Content }}
+    </div>
+
+    <!-- Optional: Add sections for experience, skills, etc. -->
+    {{ if .Params.experience }}
+    <section class="experience">
+        <h2>Experience</h2>
+        {{ range .Params.experience }}
+        <div class="experience-item">
+            <h3>{{ .role }}</h3>
+            <p>{{ .company }} ({{ .period }})</p>
+            <p>{{ .description }}</p>
+        </div>
+        {{ end }}
+    </section>
+    {{ end }}
+
+    <!-- Optional: Add a contact section -->
+    {{ if .Params.contact }}
+    <section class="contact">
+        <h2>Contact</h2>
+        <p>{{ .Params.contact }}</p>
+    </section>
+    {{ end }}
+</article>
+{{ end }}
