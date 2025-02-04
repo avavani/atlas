@@ -9,11 +9,11 @@
     <lastBuildDate>Fri, 31 Jan 2025 19:52:04 -0500</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Nepcensus</title>
-      <link>http://localhost:1313/posts/nepcensus/</link>
+      <title>The Coal Plants Still Powering America</title>
+      <link>http://localhost:1313/posts/coal-plants/</link>
       <pubDate>Fri, 31 Jan 2025 19:52:04 -0500</pubDate>
-      <guid>http://localhost:1313/posts/nepcensus/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;This is &lt;strong&gt;bold&lt;/strong&gt; text, and this is &lt;em&gt;emphasized&lt;/em&gt; text.&lt;/p&gt;&#xA;&lt;p&gt;Visit the &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; website!&lt;/p&gt;&#xA;&lt;p&gt;I can write other features of this text here as well. Cool.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/posts/coal-plants/</guid>
+      <description>&lt;p&gt;As of 2025, there are still 200 power plants across the United States that are powered by coal. While these facilities fulfill the important purpose of balancing electrical loads, their negative impacts on both human health and the environment are well documented. The map below visualizes the location of active coal power plants across the United States, with a 10-mile radius marked around each facility to illustrate the areas most directly affected by their emissions.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

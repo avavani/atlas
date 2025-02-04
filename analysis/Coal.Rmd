@@ -1,0 +1,79 @@
+---
+title: "CoalinUS"
+author: "Avani"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(pacman)
+p_load(tidyverse, sf, tigris, tmap, tidycensus, knitr)
+p_load(showtext,sysfonts)
+font_add_google("IBM Plex Sans") 
+font_add_google("Oxygen") 
+showtext_auto()
+
+knit("Coal.Rmd", output = "Coal.md")
+
+dat <- st_read('../data/coal/EIA_powerplantsbyenergy.geojson')
+
+coal <- dat%>%
+  filter(PrimSource == "coal")%>%
+  filter(State != "Alaska" & State != "Puerto Rico" )%>%
+  st_transform(crs = 5070)%>%
+  st_buffer(dist = 16093.44)
+
+us <- tigris::states()%>%
+    filter(!STUSPS %in% c("AK", "AS", "MP", "VI", "HI", "GU", "PR"))%>%
+  st_transform(crs = 5070)
+```
+
+## The Coal Plants Still Powering America
+
+As of 2025, there are still 200 power plants across the United States that are powered by coal. While these facilities fulfill the important purpose of balancing electrical loads, their negative impacts on both human health and the environment are well documented. The map below visualizes the location of active coal power plants across the United States, with a 10-mile radius marked around each facility to illustrate the areas most directly affected by their emissions.
+
+```{r data}
+ggplot()+
+  geom_sf(data = us, fill="black", color="cyan")+
+  geom_sf(data=coal, fill = "yellow", color = "yellow")+
+  labs(caption = "Source:USEIA")+
+  theme_void()+
+  theme(
+    text = element_text(family = "IBM Plex Sans", color = "cyan"),
+    plot.background = element_rect(fill="black"),
+    panel.background = element_rect(fill="black"),
+    plot.margin = margin(10, 10, 10, 10))
+```
+
+While 200 coal power plants may seem like a relatively small number, these facilities pose significant health and sustainability concerns for approximately 66 million Americans who live in counties hosting these installations. Pennsylvania has the highest amount of people that live in counties hosting coal power plants followed by Missouri, Texas and Ohio. 
+
+
+```{r}
+pop%>%
+  arrange(desc(tot))%>%
+  head(5)%>%
+  mutate(tot = tot/10000,
+         State = factor(State, levels = State))%>%
+  ggplot(aes(x = State, y = tot)) + 
+  geom_col(fill = "yellow") +     
+  labs(
+    x = NULL,
+    y = NULL,
+    caption = "Source: ACS 2024",
+    title = "States by Population Living in Counties Hosting Coal Plants"
+  ) +
+  theme_void() +
+  scale_y_continuous(labels = function(x) paste0(x, "K")) +
+  theme(
+    text = element_text(family = "IBM Plex Sans", color = "cyan"),
+    plot.background = element_rect(fill = "black"),
+    panel.background = element_rect(fill = "black"),
+    plot.margin = margin(10, 10, 10, 10),
+    plot.title = element_text(face="bold"),
+    axis.title.y = element_text(angle= 90, vjust = 1),
+    axis.text = element_text(color = "cyan"),  
+    axis.title = element_text(color = "cyan")  
+  )
+
+```

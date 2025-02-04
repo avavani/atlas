@@ -16,11 +16,11 @@
       <description>&lt;h1 id=&#34;hi-im-avani-&#34;&gt;Hi, I&amp;rsquo;m Avani 👋&lt;/h1&gt;&#xA;&lt;p&gt;&lt;img src=&#34;avani.jpeg&#34; alt=&#34;Avani&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m a technologist passionate about leveraging spatial data to address our most pressing challenges. The individual person thinks in terms of space. Spatial data hence can help uncover unique insights on consumer behaviour, public health, supply chains, and labour markets through a people-first lens.&lt;/p&gt;&#xA;&lt;p&gt;This is my personal website where I document my own learnings about our world. I am very grateful to all that are taking their time to view my work—please feel free to direct any feedback, suggestions, or thoughts to my &lt;a href=&#34;mailto:avaniadhikari@hotmail.com&#34;&gt;email&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Nepcensus</title>
-      <link>http://localhost:1313/posts/nepcensus/</link>
+      <title>The Coal Plants Still Powering America</title>
+      <link>http://localhost:1313/posts/coal-plants/</link>
       <pubDate>Fri, 31 Jan 2025 19:52:04 -0500</pubDate>
-      <guid>http://localhost:1313/posts/nepcensus/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;This is &lt;strong&gt;bold&lt;/strong&gt; text, and this is &lt;em&gt;emphasized&lt;/em&gt; text.&lt;/p&gt;&#xA;&lt;p&gt;Visit the &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; website!&lt;/p&gt;&#xA;&lt;p&gt;I can write other features of this text here as well. Cool.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/posts/coal-plants/</guid>
+      <description>&lt;p&gt;As of 2025, there are still 200 power plants across the United States that are powered by coal. While these facilities fulfill the important purpose of balancing electrical loads, their negative impacts on both human health and the environment are well documented. The map below visualizes the location of active coal power plants across the United States, with a 10-mile radius marked around each facility to illustrate the areas most directly affected by their emissions.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
