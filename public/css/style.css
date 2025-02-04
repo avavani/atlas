@@ -91,8 +91,25 @@ header {
     margin: 1rem auto 0 auto;
     line-height: 1;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-evenly;
+}
+
+#site-title {
+    display: inline-block;
+    color: whitesmoke;
+    border: 2px solid whitesmoke;
+    padding: 0.6rem;
+    text-transform: uppercase;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+
+#site-title:hover {
+    color: #29524a;
+    background-color: whitesmoke;
 }
 
 #site-title {
@@ -114,6 +131,12 @@ header {
 }
 
 .header-group {
+    width: fit-content;
+    font-weight: bold;
+    padding: 0.2rem 0.6rem;
+}
+
+.menu-group {
     width: fit-content;
     font-weight: bold;
     padding: 0.2rem 0.6rem;
