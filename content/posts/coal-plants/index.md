@@ -1,8 +1,10 @@
 +++
 date = '2025-01-31T19:52:04-05:00'
-draft = true
-title = 'The Coal Plants Still Powering America'
+draft = false
+title = 'The Coal Plants Powering America'
 +++
+
+**Tools**: R
 
 As of 2025, there are still 200 power plants across the United States that are powered by coal. While these facilities fulfill the important purpose of balancing electrical loads, their negative impacts on both human health and the environment are well documented. The map below visualizes the location of active coal power plants across the United States, with a 10-mile radius marked around each facility to illustrate the areas most directly affected by their emissions.
 

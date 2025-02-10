@@ -2,3 +2,9 @@ baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'Atlas'
 theme = 'Ardeidae'
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+  [security]
+  enableInlineShortcodes = true
