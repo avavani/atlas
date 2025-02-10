@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html><head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mapping Household Wealth in Kathmandu</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/fonts.css">
+    <link defer rel="stylesheet" href="/css/syntax.css">
+    
+</head><body><header>
+    <section id='menu-container'>
+    <a id="site-title" href="/">
+        Atlas
+    </a>
+    <a id="site-title" href="/about">
+        About
+    </a></section>
+    <section id="social-links" class="header-group">
+        <a href=ZgotmplZ class="header-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github"
+                viewBox="0 0 16 16">
+                <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+            </svg>
+        </a>
+
+        <a href="/index.xml" class="header-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-rss"
+                viewBox="0 0 16 16">
+                <path
+                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                <path
+                    d="M5.5 12a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-3-8.5a1 1 0 0 1 1-1c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0 8 8 0 0 0-8-8 1 1 0 0 1-1-1zm0 4a1 1 0 0 1 1-1 6 6 0 0 1 6 6 1 1 0 1 1-2 0 4 4 0 0 0-4-4 1 1 0 0 1-1-1z" />
+            </svg>
+        </a>
+    </section>
+</header>
+
+<section id="post">
+    <h1 id="post-title">Mapping Household Wealth in Kathmandu</h1>
+    <time>
+        2025-02-04
+    </time>
+    <hr />
+    <div id="post-content">
+        <p><img src="valmap.png" alt="Wealthmap"></p>
+<p><strong>Tools</strong>: Python, R</p>
+<p>Statistically speaking, Nepal is a poor country. It ranks 180/222 in terms of GDP per capita <a href="https://www.cia.gov/the-world-factbook/field/real-gdp-per-capita/country-comparison/">1</a>, ranking well behind other post-conflict nations of Kosovo(132) and Laos (153). 23.8% of the adult population are illiterate and <a href="https://censusnepal.cbs.gov.np/results/literacy">2</a> and 41.9% of households sleep under roofs of galvanized tin sheets <a href="https://censusnepal.cbs.gov.np/results/household">3</a>.</p>
+<p><img src="roofs.png" alt="Roofs">Almost 42% of the Nation&rsquo;s populations lives in housing made out of galvanized steel. Source: 2021 Nepal Census</p>
+<p>However, such reality seems extremely far away in the capital city of Kathmandu where Teslas frequent the roads. Kathmandu&rsquo;s prosperity isn&rsquo;t new and stems from a list of historic and geographic factors. Situated at 4.6K ft above sea level, the Kathmandu valley is a large swath of fertile flatland in the mountainous Himalayan Range<a href="https://www.fao.org/4/t0706e/T0706E01.htm">4</a>. Due to this geographic advantange, the region has been continously settled for at least 2000 years <a href="https://www.nepalhikingteam.com/origin-of-kathmandu-valley">5</a>. The large settlements attracted more people and soon Kathmandu found itself as an important trading hub, linking the India-Tibet land route <a href="https://www.asiasocietymuseum.com/buddhist_trade/himalaya_nepal.html">6</a>. Kings built roads, waterworks, and schools; merchants traded gold, spices and silk; while pilgrims spread art, region and philosophy. Consequentialy, Kathmandu and its residents grew rich while its surrounding countryside languished into subsistence farming.</p>
+<p>We can see Kathmandu&rsquo;s regional dominance displayed clearly in its 2021 Census data<a href="https://censusnepal.cbs.gov.np/results/downloads/ward?type=data">7</a>. A comprehensive decinnial survey, the 2021 census is the most recent and most representative data on Nepal&rsquo;s socioeconomic factors. Key metrics such as number of households and their associated wealth quintile is present at the municipal ward level in excel format. While the data is not spatial, it is possible to use data cleaning methods to convert them. This report hence marks the first spatial exploration of the Nepal census data.</p>
+<h2 id="wrangling-my-data">Wrangling my Data</h2>
+<p>To begin my analysis, I first load the ward level shapefiles for Kathmandu valley into my environment. No public GIS data exists on political boundaries—however, in its absence, civillians have taken up charge on digitizing hence. All spatial files in this analysis is thanks to the hard work of Kiran Joshi, whose blog can be found <a href="https://sites.google.com/view/maze215/home?authuser=0">here</a>.</p>
+<p>As there are no spatial geometries present in the census data, we need to join it to the ward level map by their corresponding wards. But, having been phonetically converted to English, the municipalities are not spelled the same way across the dataset. Additionally, the data also contains unnecesary (and unstandardized) descriptors which will inhibit a join.</p>
+<p>To address these issues, I remove all unneeded suffixes and match my datasets using a fuzzy criteria. Two neighbourhoods are considered the same if their names are up to 80% similar.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> fuzzywuzzy <span style="color:#f92672">import</span> fuzz
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> fuzzywuzzy <span style="color:#f92672">import</span> process
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#helper function to clean unnecesary descriptors</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">clean_name</span>(name):
+</span></span><span style="display:flex;"><span>    name <span style="color:#f92672">=</span> name<span style="color:#f92672">.</span>strip()
+</span></span><span style="display:flex;"><span>    suffs <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39; Municipality&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39; Metropolitian City&#39;</span>, 
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39; Metropolitan City&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39; Mahanagarpalika&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39; Nagarpalika&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39; Nagarpalika VDC&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39; Mun&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39; Gabisa Karyalaya&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39; Gabisa Bhawan&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39; Gaunpalika&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39; Sub Metro&#39;</span>
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>    clean <span style="color:#f92672">=</span> name
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> suffix <span style="color:#f92672">in</span> suffs:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> clean<span style="color:#f92672">.</span>endswith(suffix):
+</span></span><span style="display:flex;"><span>            clean <span style="color:#f92672">=</span> clean[:<span style="color:#f92672">-</span>len(suffix)]<span style="color:#f92672">.</span>strip()
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> clean
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Cleaning the column containing municipality information</span>
+</span></span><span style="display:flex;"><span>cities[<span style="color:#e6db74">&#39;Municipality&#39;</span>] <span style="color:#f92672">=</span> cities[<span style="color:#e6db74">&#39;Mun_Name&#39;</span>]<span style="color:#f92672">.</span>apply(clean_name)
+</span></span><span style="display:flex;"><span>valhhwealth[<span style="color:#e6db74">&#39;Municipality&#39;</span>] <span style="color:#f92672">=</span> valhhwealth[<span style="color:#e6db74">&#39;name&#39;</span>]<span style="color:#f92672">.</span>apply(clean_name)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># fuzzy matching accoridng to cleaned names</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">find_match</span>(name, choices, min_score<span style="color:#f92672">=</span><span style="color:#ae81ff">80</span>):
+</span></span><span style="display:flex;"><span>    best_match <span style="color:#f92672">=</span> process<span style="color:#f92672">.</span>extractOne(name, choices)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> best_match <span style="color:#f92672">and</span> best_match[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">&gt;=</span> min_score:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> best_match[<span style="color:#ae81ff">0</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># creating a mapping column of fuzzy matched names</span>
+</span></span><span style="display:flex;"><span>name_mapping <span style="color:#f92672">=</span> {}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> name <span style="color:#f92672">in</span> cities[<span style="color:#e6db74">&#39;Municipality&#39;</span>]<span style="color:#f92672">.</span>unique():
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">match</span> <span style="color:#f92672">=</span> find_match(name, valhhwealth[<span style="color:#e6db74">&#39;Municipality&#39;</span>]<span style="color:#f92672">.</span>unique())
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">match</span>:
+</span></span><span style="display:flex;"><span>        name_mapping[name] <span style="color:#f92672">=</span> <span style="color:#66d9ef">match</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#adding those to the dataset</span>
+</span></span><span style="display:flex;"><span>cities[<span style="color:#e6db74">&#39;new_name&#39;</span>] <span style="color:#f92672">=</span> cities[<span style="color:#e6db74">&#39;Municipality&#39;</span>]<span style="color:#f92672">.</span>map(name_mapping)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># joining my census data to the spatial files</span>
+</span></span><span style="display:flex;"><span>cities_inc <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>merge(cities, 
+</span></span><span style="display:flex;"><span>                     valhhwealth,
+</span></span><span style="display:flex;"><span>                     left_on<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;new_name&#39;</span>, <span style="color:#e6db74">&#39;Ward_No&#39;</span>],
+</span></span><span style="display:flex;"><span>                     right_on<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;Municipality&#39;</span>, <span style="color:#e6db74">&#39;ward&#39;</span>],
+</span></span><span style="display:flex;"><span>                     how<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;left&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#finally, converting my data to WGS84</span>
+</span></span><span style="display:flex;"><span>cities_inc <span style="color:#f92672">=</span> cities_inc<span style="color:#f92672">.</span>to_crs(<span style="color:#e6db74">&#39;EPSG:4326&#39;</span>)
+</span></span></code></pre></div><h2 id="setting-the-city-limits">Setting the city limits</h2>
+<p>Our analysis will not be very useful if we include sparsely populated hill wards in our dataset. Our study area needs to have tigther city limits—for this purpose I use a road density based selection criteria. Using road network data from Open Street Maps, I calculate the density of streets by area for each ward. I then filter out all wards who fall in the bottom 30th percentile for road density.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> osmnx <span style="color:#66d9ef">as</span> ox
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> shapely.geometry <span style="color:#f92672">import</span> Polygon
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#getting my valley shapefile</span>
+</span></span><span style="display:flex;"><span>valley <span style="color:#f92672">=</span> cities_inc<span style="color:#f92672">.</span>dissolve()<span style="color:#f92672">.</span>make_valid()
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#getting streets within valley</span>
+</span></span><span style="display:flex;"><span>street_network <span style="color:#f92672">=</span> 
+</span></span><span style="display:flex;"><span>    ox<span style="color:#f92672">.</span>graph_from_polygon(valley<span style="color:#f92672">.</span>geometry<span style="color:#f92672">.</span>iloc[<span style="color:#ae81ff">0</span>], network_type<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;drive&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#getting street edges</span>
+</span></span><span style="display:flex;"><span>edges <span style="color:#f92672">=</span> ox<span style="color:#f92672">.</span>graph_to_gdfs(street_network, edges <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>, 
+</span></span><span style="display:flex;"><span>    nodes <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>)<span style="color:#f92672">.</span>to_crs(cities_inc<span style="color:#f92672">.</span>crs)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#counting number of streets per ward</span>
+</span></span><span style="display:flex;"><span>cities_inc[<span style="color:#e6db74">&#39;streetcount&#39;</span>] <span style="color:#f92672">=</span> cities_inc<span style="color:#f92672">.</span>geometry<span style="color:#f92672">.</span>apply(
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">lambda</span> x: len(edges[edges<span style="color:#f92672">.</span>intersects(x)])  
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#creating density metric</span>
+</span></span><span style="display:flex;"><span>cities_inc[<span style="color:#e6db74">&#39;streetdensity&#39;</span>] <span style="color:#f92672">=</span> 
+</span></span><span style="display:flex;"><span>    cities_inc[<span style="color:#e6db74">&#39;streetcount&#39;</span>]<span style="color:#f92672">/</span>cities_inc[<span style="color:#e6db74">&#39;Area_SQKM&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#selecting 30th quartile threshold</span>
+</span></span><span style="display:flex;"><span>threshold <span style="color:#f92672">=</span> cities_inc[<span style="color:#e6db74">&#39;streetdensity&#39;</span>]<span style="color:#f92672">.</span>quantile(<span style="color:#ae81ff">0.30</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#subsetting values</span>
+</span></span><span style="display:flex;"><span>main_city <span style="color:#f92672">=</span> cities_inc[cities_inc[<span style="color:#e6db74">&#39;streetdensity&#39;</span>] <span style="color:#f92672">&gt;=</span> threshold]
+</span></span></code></pre></div><h2 id="visualizing-wealth-patterns">Visualizing Wealth Patterns</h2>
+<p>The resulting dataset allows us the visualize the distribution of households by their economic quartile across Kathmandu. Toggle with the layer selection on the top right to see how the percentage of households belonging to each economic quartile varies across the city.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> folium
+</span></span><span style="display:flex;"><span>m <span style="color:#f92672">=</span> main_city<span style="color:#f92672">.</span>explore(
+</span></span><span style="display:flex;"><span>    column<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;quart5_%&#39;</span>,
+</span></span><span style="display:flex;"><span>    legend<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>,
+</span></span><span style="display:flex;"><span>    cmap<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;viridis&#39;</span>,
+</span></span><span style="display:flex;"><span>    name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Highest Income&#39;</span>,
+</span></span><span style="display:flex;"><span>    tooltip<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;name&#39;</span>, <span style="color:#e6db74">&#39;ward&#39;</span>, <span style="color:#e6db74">&#39;quart5_%&#39;</span>, 
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;quart4_%&#39;</span>, <span style="color:#e6db74">&#39;quart3_%&#39;</span>, <span style="color:#e6db74">&#39;quart2_%&#39;</span>,<span style="color:#e6db74">&#39;quart1_%&#39;</span>]
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>main_city<span style="color:#f92672">.</span>explore(
+</span></span><span style="display:flex;"><span>    column<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;quart1_%&#39;</span>,
+</span></span><span style="display:flex;"><span>    cmap<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;inferno&#39;</span>,
+</span></span><span style="display:flex;"><span>    name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Lowest Income&#39;</span>,
+</span></span><span style="display:flex;"><span>    m<span style="color:#f92672">=</span>m ,
+</span></span><span style="display:flex;"><span>    tooltip<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;name&#39;</span>, <span style="color:#e6db74">&#39;ward&#39;</span>, <span style="color:#e6db74">&#39;quart5_%&#39;</span>, 
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;quart4_%&#39;</span>, <span style="color:#e6db74">&#39;quart3_%&#39;</span>, <span style="color:#e6db74">&#39;quart2_%&#39;</span>,<span style="color:#e6db74">&#39;quart1_%&#39;</span>]
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>folium<span style="color:#f92672">.</span>LayerControl()<span style="color:#f92672">.</span>add_to(m)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>m
+</span></span></code></pre></div><iframe src="/html/nepal_census/map1.html" width="100%" height="800px" frameborder="0"></iframe>
+<h3 id="estimating-income-distribution">Estimating Income Distribution</h3>
+<p>Though the census data doesn&rsquo;t provide us with information on median household income, it is possible to estimate this data using other publicly available government data. The National Statistics Office has information on the median and mean income values for each quartile on their <a href="https://data.nsonepal.gov.np/dataset/b6c3c19b-4b15-44bf-8653-1571e76dad14/resource/d711c2a1-2f5c-47a6-be02-bb4073fe234d?inner_span=True">website</a>.</p>
+<p>I used this information to come up with weighted estimates of median income for each ward using the proportion of quantile distribution.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#getting the median income value for all economic quartiles</span>
+</span></span><span style="display:flex;"><span>med_inc <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;quart1&#39;</span>: <span style="color:#ae81ff">242797</span>,  
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;quart2&#39;</span>: <span style="color:#ae81ff">299341</span>,  
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;quart3&#39;</span>: <span style="color:#ae81ff">377000</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;quart4&#39;</span>: <span style="color:#ae81ff">465301</span>,  
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;quart5&#39;</span>: <span style="color:#ae81ff">617882</span>  
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#calculating its weighted estimate based on ward level population</span>
+</span></span><span style="display:flex;"><span>main_city[<span style="color:#e6db74">&#39;Est Income&#39;</span>] <span style="color:#f92672">=</span> (
+</span></span><span style="display:flex;"><span>    main_city[<span style="color:#e6db74">&#39;quart1_count&#39;</span>] <span style="color:#f92672">*</span> med_inc[<span style="color:#e6db74">&#39;quart1&#39;</span>] <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>    main_city[<span style="color:#e6db74">&#39;quart2_count&#39;</span>] <span style="color:#f92672">*</span> med_inc[<span style="color:#e6db74">&#39;quart2&#39;</span>] <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>    main_city[<span style="color:#e6db74">&#39;quart3_count&#39;</span>] <span style="color:#f92672">*</span> med_inc[<span style="color:#e6db74">&#39;quart3&#39;</span>] <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>    main_city[<span style="color:#e6db74">&#39;quart4_count&#39;</span>] <span style="color:#f92672">*</span> med_inc[<span style="color:#e6db74">&#39;quart4&#39;</span>] <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>    main_city[<span style="color:#e6db74">&#39;quart5_count&#39;</span>] <span style="color:#f92672">*</span> med_inc[<span style="color:#e6db74">&#39;quart5&#39;</span>]
+</span></span><span style="display:flex;"><span>) <span style="color:#f92672">/</span> main_city[[<span style="color:#e6db74">&#39;quart1_count&#39;</span>, <span style="color:#e6db74">&#39;quart2_count&#39;</span>, <span style="color:#e6db74">&#39;quart3_count&#39;</span>, 
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;quart4_count&#39;</span>, <span style="color:#e6db74">&#39;quart5_count&#39;</span>]]<span style="color:#f92672">.</span>sum(axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#rounding and cleaning the datatype</span>
+</span></span><span style="display:flex;"><span>main_city[<span style="color:#e6db74">&#39;Est Income&#39;</span>] <span style="color:#f92672">=</span> 
+</span></span><span style="display:flex;"><span>    pd<span style="color:#f92672">.</span>to_numeric((main_city[<span style="color:#e6db74">&#39;Est Income&#39;</span>])<span style="color:#f92672">/</span><span style="color:#ae81ff">100000</span>)<span style="color:#f92672">.</span>round(<span style="color:#ae81ff">1</span>)
+</span></span></code></pre></div><p>And this gives us our final dataset! Explore the income distribution yourself below to learn more!</p>
+<iframe src="/html/nepal_census/map2.html" width="100%" height="800px" frameborder="0"></iframe>
+    </div>
+</section>
+
+
+
+<footer>
+    Powered by <a href="https://gohugo.io/">Hugo</a>, using theme <a
+        href="https://github.com/LuisSousaRego/Ardeidae">Ardeidae</a>
+</footer></body>
+
+</html>
