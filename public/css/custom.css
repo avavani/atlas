@@ -1,0 +1,5 @@
+#menu-container {
+    display: flex;
+    gap: 0.7rem; 
+    align-items: center;
+}
