@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+{{- partial "head.html" . -}}
+
+<body>
+    <div id="landing">
+
+        <div id="landing-canva"></div>
+
+        <div id="landing-content">
+            {{- partial "header.html" . -}}
+            <section id="posts-container">
+                <ul>
+                    {{ range where .Site.RegularPages.ByPublishDate.Reverse "Params.excludeFromIndex" "!=" true }}
+                    <li class="post">
+                        <a href="{{ .Permalink }}">
+                            {{ .Title }}
+                            <br />
+                            <time>{{ .Date.Format (.Site.Params.dateform | default "2006-01-02") }}</time>
+                        </a>
+                    </li>
+                    {{ end }}
+                </ul>
+            </section>
+            {{- partial "footer.html" . -}}
+        </div>
+    </div>
+
+    <script src="{{ relURL `p5/p5.min.js` }}"></script>
+    <script src="{{ relURL `js/genart.js` }}"></script>
+</body>
+
+</html>

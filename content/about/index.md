@@ -2,6 +2,7 @@
 date = '2025-01-31T20:04:02-05:00'
 draft = false
 title = 'About'
+excludeFromIndex = true
 +++
 
 <div class="hero-section">

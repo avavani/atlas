@@ -2,7 +2,7 @@ const colors = {
     "aureolin": "#F7E733",
     "green": "#29524A",
     "whiteSmoke": "#F5F5F5",
-    "wheat": "#EFD6AC",
+    "ivory": "#FFFFF0",
     "turquoise": "#41E2BA",
 }
 
@@ -30,7 +30,7 @@ function setup() {
 function draw() {
     background(colors.green);
     noFill();
-    stroke(colors.wheat);
+    stroke(colors.ivory);
 
     rotate(rotation);
     translate(0, -(Math.sin(rotation) * width));
