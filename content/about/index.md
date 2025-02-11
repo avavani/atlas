@@ -7,7 +7,9 @@ excludeFromIndex = true
 
 <div class="hero-section">
     <div class="hero-text">
-        <h1 class="greeting">Hi, I'm Avani <span class="wave">👋</span></h1>
+        <h1 class="greeting">Hi<span class="wave">👋</span></h1>
+        <p>I'm Avani, a technologist passionate about leveraging spatial data to address our most pressing challenges.
+        </p> 
     </div>
     <div class="hero-image">
         <img src="avani.jpeg" alt="Avani" class="profile-image">
@@ -16,8 +18,7 @@ excludeFromIndex = true
 
 <div class="main-content">
     <div class="intro-section">
-    <p>I'm a technologist passionate about leveraging spatial data to address our most pressing challenges.</p> 
-    <p>The individual person thinks in terms of space. Spatial data can help uncover unique insights on transit, consumer behaviour, public health, supply chains, and labour markets through a people-first lens.</p>
+    <p>The individual person thinks in terms of space.</p><p>Spatial data can help uncover unique insights on transit, consumer behaviour, public health, supply chains, and labour markets through a people-first lens.</p>
     <p>This is my personal website where I document my own learnings about our world. I am very grateful to all that are taking their time to view my work—please feel free to direct any feedback, suggestions, or thoughts to my <a href="mailto:avaniadhikari@hotmail.com">email</a>.
     </p>
 </div>
@@ -55,7 +56,7 @@ excludeFromIndex = true
     </div>
 </div>
 <div class="facts-section">
-    <h2 class="facts-header">Some quick facts about me:</h2>
+    <h2 class="facts-header">Some quick facts about me</h2>
 <div class="custom-bullets">
 <ul>
   <li data-emoji="🌏">
@@ -86,7 +87,7 @@ excludeFromIndex = true
 
 .custom-bullets li {
     position: relative;
-    color:  #29524a;
+    color:#EEE5E9;
     padding-left: 3.5rem;
     margin-bottom: 1.5rem;
     min-height: 3rem;
@@ -123,13 +124,21 @@ excludeFromIndex = true
 .hero-section {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    background-color: rgba(238, 229, 233, 0.3);
+    border-radius: 0.2rem;
+    justify-content: space-evenly;
     margin: 2rem 0 4rem 0;
-    gap: 2rem;
+    padding-left: 3rem;
+    gap: 6rem;
 }
 
 .hero-text {
-    flex: 1;
+    flex: 2;
+    font-size:1.5rem;
+    color: #0E1B17;
+    font-weight: bold;
+    padding-bottom: 2rem;
+    gap: 1rem;
 }
 
 .hero-image {
@@ -138,9 +147,9 @@ excludeFromIndex = true
 
 /* Profile image styling */
 .profile-image {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    border-radius: 2%;
     object-fit: cover;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -149,7 +158,8 @@ excludeFromIndex = true
 .greeting {
     font-size: 3.5rem;
     font-weight: bold;
-    margin-bottom: 2rem;
+    color: #0E1B17;
+    margin-bottom: 1rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -174,27 +184,22 @@ excludeFromIndex = true
 }
 
 
-/* Facts section styling */
-.facts-section {
-    margin: 3rem 0;
-}
-
 .facts-header {
     font-size: 2rem;
     font-weight: bold;
-    margin-bottom: 2rem;
+    padding-left:1rem;
+    color:#D64933;
 }
 
 .custom-bullets {
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0.4rem;
+    box-shadow: 0 4px 6px #0E1B17;
     padding: 2rem;
 }
 
 .custom-bullets li {
-    background: white;
     padding: 1.5rem 1.5rem 1.5rem 4.5rem;
+    background-color: rgba(238, 229, 233, 0.3);
     border-radius: 0.5rem;
     margin-bottom: 1.5rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -258,6 +263,7 @@ excludeFromIndex = true
     font-size: 1.2rem;
     line-height: 1.9;
     font-weight: bold;
+    text-align:center;
 }
 
 
@@ -286,7 +292,7 @@ excludeFromIndex = true
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 2rem;
-    color:rgb(255, 255, 255);
+    color:#D64933;
 }
 
 .gallery-grid {

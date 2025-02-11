@@ -2,19 +2,26 @@
 
 html,
 body {
-    color: #FFFFF0;
+    color: #EEE5E9;
     margin: 0;
     padding: 0;
-    background: rgb(31,64,55);
-    background: linear-gradient(0deg, rgba(31,64,55,1) 0%, rgba(143,160,148,1) 20%, rgba(255,255,240,1) 100%);
+    background: #0E1B17;
 }
 
+body h1 {
+font-family: "Sansita";
+}
+
+body h2 {
+    font-family: "Sansita";
+    }
+
 a {
-    color: #f7e733
+    color: #D64933
 }
 
 hr {
-    color: #FFFFF0
+    color: #EEE5E9
 }
 
 /* landing page */
@@ -26,7 +33,7 @@ hr {
 
 #landing a {
     text-decoration: none;
-    color: #FFFFF0;
+    color: #EEE5E9;
 }
 
 #landing ul {
@@ -43,7 +50,7 @@ hr {
 #landing time {
     font-weight: normal;
     font-size: 1.5rem;
-    color: #f7e733;
+    color: #D64933;
 }
 
 #landing-content {
@@ -61,12 +68,12 @@ hr {
 
 #landing-content footer a {
     text-decoration: underline;
-    color: #f7e733;
+    color: #D64933;
 }
 
 #posts-container {
     font-size: 2rem;
-    font-family: "Ubuntu Mono", monospace;
+    font-family: "Sansita", monospace;
     font-weight: bold;
     margin-top: 3rem;
     padding: 0 10rem 0 0;
@@ -98,11 +105,11 @@ header {
 
 #site-title {
     display: inline-block;
-    color: #FFFFF0;
-    border: 2px solid #FFFFF0;
+    color: #EEE5E9;
+    border: 2px solid #EEE5E9;
     padding: 0.6rem;
     text-transform: uppercase;
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Sansita", sans-serif;
     font-size: 1.5rem;
     font-weight: bold;
     text-decoration: none;
@@ -110,8 +117,8 @@ header {
 }
 
 #site-title:hover {
-    color: #29524a;
-    background-color: #FFFFF0;
+    color: #EEE5E9;
+    background-color: #D64933;
 }
 
 .header-group {
@@ -122,7 +129,7 @@ header {
 
 .header-icon {
     text-decoration: none;
-    color: #FFFFF0;
+    color: #EEE5E9;
     padding: 0 0.3rem;
 }
 
@@ -135,20 +142,20 @@ header {
 
 #post {
     margin: auto;
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Quicksand", sans-serif;
     max-width: 800px;
     font-size: 1.2rem;
 }
 
 #post-title {
-    color: #FFFFF0;
+    color: #D64933;
     margin: 4rem 0 0.5rem 0;
     font-size: 2rem;
     font-weight: bold;
 }
 
 #post time {
-    color: #f7e733;
+    color: #EEE5E9;
     font-size: 1.3rem;
     font-weight: bold;
 }
@@ -159,7 +166,7 @@ header {
 }
 
 #after-post {
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Sansita", sans-serif;
     font-weight: bold;
     font-size: 1rem;
     text-align: center;
@@ -173,7 +180,7 @@ header {
 }
 
 #reply-by-email a {
-    border: 2px solid #f7e733;
+    border: 2px solid #D64933;
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: bold;
@@ -181,15 +188,15 @@ header {
 }
 
 #reply-by-email a:hover {
-    background-color: #f7e733;
-    color: #29524a;
+    background-color: #D64933;
+    color: #EEE5E9;
 }
 
 
 /* footer */
 
 footer {
-    font-family: "Ubuntu Mono", monospace;
+    font-family: "Quicksand", monospace;
     color: #FFFFF0;
     opacity: 0.75;
     font-size: 1rem;
@@ -205,7 +212,7 @@ img {
 }
 
 .chroma {
-    font-family: "Ubuntu Mono", monospace;
+    font-family: "Quicksand", monospace;
     font-size: 1rem;
     padding: 1.5rem 1rem;
     border-radius: 3px;

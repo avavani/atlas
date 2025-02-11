@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Atlas</title>
-    <link>http://localhost:1313/posts/</link>
+    <link>http://localhost:1313/avavani/posts/</link>
     <description>Recent content in Posts on Atlas</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 07 Feb 2025 14:03:58 -0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/avavani/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Cobalt Supply Chain</title>
-      <link>http://localhost:1313/posts/cobalt-supply/</link>
+      <link>http://localhost:1313/avavani/posts/cobalt-supply/</link>
       <pubDate>Fri, 07 Feb 2025 14:03:58 -0500</pubDate>
-      <guid>http://localhost:1313/posts/cobalt-supply/</guid>
+      <guid>http://localhost:1313/avavani/posts/cobalt-supply/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Tools&lt;/strong&gt;: HTML, CSS, Vanilla Javascript (with modules like leaflet)&lt;/p&gt;&#xA;&lt;h3 id=&#34;for-more-than-a-century-the-democratic-republic-of-congo-has-been-foundational-in-the-development-of-modern-technologies&#34;&gt;For more than a century, the &lt;strong&gt;Democratic Republic of Congo&lt;/strong&gt; has been &lt;strong&gt;foundational&lt;/strong&gt; in the development of modern technologies.&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Rubber&lt;/strong&gt; for car tires, &lt;strong&gt;copper&lt;/strong&gt; for electrical wiring, and even the &lt;strong&gt;uranium&lt;/strong&gt; used in the Manhattan Project—all of them came from the mines of the &lt;strong&gt;Democratic Republic of Congo&lt;/strong&gt;. Yet, very little of material benefit from these resources has ever trickled down to its people.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Mapping Household Wealth in Kathmandu</title>
-      <link>http://localhost:1313/posts/nepal_census/</link>
+      <link>http://localhost:1313/avavani/posts/nepal_census/</link>
       <pubDate>Tue, 04 Feb 2025 14:03:58 -0500</pubDate>
-      <guid>http://localhost:1313/posts/nepal_census/</guid>
+      <guid>http://localhost:1313/avavani/posts/nepal_census/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;valmap.png&#34; alt=&#34;Wealthmap&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Tools&lt;/strong&gt;: Python, R&lt;/p&gt;&#xA;&lt;p&gt;Statistically speaking, Nepal is a poor country. It ranks 180/222 in terms of GDP per capita &lt;a href=&#34;https://www.cia.gov/the-world-factbook/field/real-gdp-per-capita/country-comparison/&#34;&gt;1&lt;/a&gt;, ranking well behind other post-conflict nations of Kosovo(132) and Laos (153). 23.8% of the adult population are illiterate and &lt;a href=&#34;https://censusnepal.cbs.gov.np/results/literacy&#34;&gt;2&lt;/a&gt; and 41.9% of households sleep under roofs of galvanized tin sheets &lt;a href=&#34;https://censusnepal.cbs.gov.np/results/household&#34;&gt;3&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;roofs.png&#34; alt=&#34;Roofs&#34;&gt;Almost 42% of the Nation&amp;rsquo;s populations lives in housing made out of galvanized steel. Source: 2021 Nepal Census&lt;/p&gt;&#xA;&lt;p&gt;However, such reality seems extremely far away in the capital city of Kathmandu where Teslas frequent the roads. Kathmandu&amp;rsquo;s prosperity isn&amp;rsquo;t new and stems from a list of historic and geographic factors. Situated at 4.6K ft above sea level, the Kathmandu valley is a large swath of fertile flatland in the mountainous Himalayan Range&lt;a href=&#34;https://www.fao.org/4/t0706e/T0706E01.htm&#34;&gt;4&lt;/a&gt;. Due to this geographic advantange, the region has been continously settled for at least 2000 years &lt;a href=&#34;https://www.nepalhikingteam.com/origin-of-kathmandu-valley&#34;&gt;5&lt;/a&gt;. The large settlements attracted more people and soon Kathmandu found itself as an important trading hub, linking the India-Tibet land route &lt;a href=&#34;https://www.asiasocietymuseum.com/buddhist_trade/himalaya_nepal.html&#34;&gt;6&lt;/a&gt;. Kings built roads, waterworks, and schools; merchants traded gold, spices and silk; while pilgrims spread art, region and philosophy. Consequentialy, Kathmandu and its residents grew rich while its surrounding countryside languished into subsistence farming.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Spotspotter: A Parking Finder</title>
-      <link>http://localhost:1313/posts/spotspotter-a-parking-finder/</link>
+      <link>http://localhost:1313/avavani/posts/spotspotter-a-parking-finder/</link>
       <pubDate>Fri, 31 Jan 2025 19:52:04 -0500</pubDate>
-      <guid>http://localhost:1313/posts/spotspotter-a-parking-finder/</guid>
+      <guid>http://localhost:1313/avavani/posts/spotspotter-a-parking-finder/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Tools&lt;/strong&gt;: HTML, CSS, Vanilla Javascript (with modules like leaflet and chart.js)&lt;/p&gt;&#xA;&lt;p&gt;As you circle around the block for the 5th time searching for an empty parking spot, don&amp;rsquo;t you think—wow, I wish there could be an easier option?&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Spotspotter&lt;/strong&gt; is an interactive, crowdsourced parking finder that seeks to solve this information gap in Sacramento.&lt;/p&gt;&#xA;&lt;div class=&#34;gallery&#34;&gt;&#xA;  &lt;div class=&#34;gallery-item&#34;&gt;&#xA;    &lt;img src=&#34;img1.png&#34; alt=&#34;Page 1&#34;&gt;&#xA;    &lt;p&gt; Enter a location and a time slot to see all the available parking within walking distance.&#xA;&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Coal Plants Powering America</title>
-      <link>http://localhost:1313/posts/coal-plants/</link>
+      <link>http://localhost:1313/avavani/posts/coal-plants/</link>
       <pubDate>Fri, 31 Jan 2025 19:52:04 -0500</pubDate>
-      <guid>http://localhost:1313/posts/coal-plants/</guid>
+      <guid>http://localhost:1313/avavani/posts/coal-plants/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Tools&lt;/strong&gt;: R&lt;/p&gt;&#xA;&lt;p&gt;As of 2025, there are still 200 power plants across the United States that are powered by coal. While these facilities fulfill the important purpose of balancing electrical loads, their negative impacts on both human health and the environment are well documented. The map below visualizes the location of active coal power plants across the United States, with a 10-mile radius marked around each facility to illustrate the areas most directly affected by their emissions.&lt;/p&gt;</description>
     </item>
   </channel>

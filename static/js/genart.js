@@ -1,8 +1,8 @@
 const colors = {
     "aureolin": "#F7E733",
-    "green": "#29524A",
+    "lavender": "#EEE5E9",
     "whiteSmoke": "#F5F5F5",
-    "ivory": "#FFFFF0",
+    "eeriegreen": "#0E1B17",
     "turquoise": "#41E2BA",
 }
 
@@ -28,9 +28,9 @@ function setup() {
 }
 
 function draw() {
-    background(colors.green);
+    background(colors.lavender);
     noFill();
-    stroke(colors.ivory);
+    stroke(colors.eeriegreen);
 
     rotate(rotation);
     translate(0, -(Math.sin(rotation) * width));

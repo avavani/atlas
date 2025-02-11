@@ -1,0 +1,71 @@
+/* Sansita Regular */
+@font-face {
+    font-family: "Sansita";
+    src: url('..fonts/Sansita/Sansita-Regular.ttf');
+    src: url('..fonts/Sansita/Sansita-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Sansita Italic */
+@font-face {
+    font-family: "Sansita";
+    src: url('..fonts/Sansita/Sansita-Italic.ttf');
+    src: url('..fonts/Sansita/Sansita-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* Sansita Bold */
+@font-face {
+    font-family: "Sansita";
+    src: url('..fonts/Sansita/Sansita-Bold.ttf');
+    src: url('..fonts/Sansita/Sansita-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Sansita BoldItalic */
+@font-face {
+    font-family: "Sansita";
+    src: url('..fonts/Sansita/Sansita-BoldItalic.ttf');
+    src: url('..fonts/Sansita/Sansita-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* Quicksand Regular */
+@font-face {
+    font-family: "Quicksand";
+    src: url('..fonts/Quicksand/static/Quicksand-Regular.ttf');
+    src: url('..fonts/Quicksand/static/Quicksand-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Quicksand Italic */
+@font-face {
+    font-family: "Quicksand";
+    src: url('..fonts/Quicksand/static/Quicksand-Italic.ttf');
+    src: url('..fonts/Quicksand/static/Quicksand-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* Quicksand Bold */
+@font-face {
+    font-family: "Quicksand";
+    src: url('..fonts/Quicksand/static/Quicksand-Bold.ttf');
+    src: url('..fonts/Quicksand/static/Quicksand-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Quicksand BoldItalic */
+@font-face {
+    font-family: "Quicksand";
+    src: url('..fonts/Quicksand/static/Quicksand-BoldItalic.ttf');
+    src: url('..fonts/Quicksand/static/Quicksand-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}

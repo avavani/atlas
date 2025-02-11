@@ -56,7 +56,7 @@ As you circle around the block for the 5th time searching for an empty parking s
   .gallery-item p {
     margin-top: 10px;
     font-size: 1rem;
-    font-family: "Ubuntu Mono", monospace;
-    color: #f7e733;
+    font-family: "Quicksand", monospace;
+    color: #D64933;
   }
 </style>
