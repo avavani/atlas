@@ -8,3 +8,7 @@ theme = 'Ardeidae'
 
   [security]
   enableInlineShortcodes = true
+
+  [params]
+  description = "Hi, I'm Avani, and here, I map the world"
+  image = "/images/header.png"

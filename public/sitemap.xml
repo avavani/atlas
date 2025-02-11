@@ -2,29 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/avavani/</loc>
+    <loc>https://avavani.github.io/atlas/</loc>
     <lastmod>2025-02-07T14:03:58-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/avavani/posts/</loc>
+    <loc>https://avavani.github.io/atlas/posts/</loc>
     <lastmod>2025-02-07T14:03:58-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/avavani/posts/cobalt-supply/</loc>
+    <loc>https://avavani.github.io/atlas/posts/cobalt-supply/</loc>
     <lastmod>2025-02-07T14:03:58-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/avavani/posts/nepal_census/</loc>
+    <loc>https://avavani.github.io/atlas/posts/nepal_census/</loc>
     <lastmod>2025-02-04T14:03:58-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/avavani/about/</loc>
+    <loc>https://avavani.github.io/atlas/about/</loc>
     <lastmod>2025-01-31T20:04:02-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/avavani/posts/spotspotter-a-parking-finder/</loc>
+    <loc>https://avavani.github.io/atlas/posts/spotspotter-a-parking-finder/</loc>
     <lastmod>2025-01-31T19:52:04-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/avavani/posts/coal-plants/</loc>
+    <loc>https://avavani.github.io/atlas/posts/coal-plants/</loc>
     <lastmod>2025-01-31T19:52:04-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/avavani/categories/</loc>
+    <loc>https://avavani.github.io/atlas/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/avavani/tags/</loc>
+    <loc>https://avavani.github.io/atlas/tags/</loc>
   </url>
 </urlset>

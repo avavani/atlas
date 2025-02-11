@@ -1,0 +1,22 @@
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="{{ with .Params.image }}{{ . | absURL }}{{ else }}{{ with .Site.Params.image }}{{ . | absURL }}{{ end }}{{ end }}" />
+    <meta property="og:title" content="{{ .Title }}" />
+    <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ .Permalink }}" />
+    <meta property="og:site_name" content="{{ .Site.Title }}" />
+
+    <title>{{.Title}}</title>
+
+    {{ range .AlternativeOutputFormats -}}
+        {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
+    
+    <link rel="stylesheet" href="{{ relURL `css/style.css` }}">
+    <link rel="stylesheet" href="{{ relURL `css/fonts.css` }}">
+    <link defer rel="stylesheet" href="{{ relURL `css/syntax.css` }}">
+    
+</head>
