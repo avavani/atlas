@@ -143,7 +143,7 @@ folium.LayerControl().add_to(m)
 
 m
 ```
-<iframe src="/html/nepal_census/map1.html" width="100%" height="800px" frameborder="0"></iframe>
+<iframe src="/atlas/html/nepal_census/map1.html" width="100%" height="800px" frameborder="0"></iframe>
 
 ### Estimating Income Distribution
 
@@ -177,4 +177,4 @@ main_city['Est Income'] =
 ```
 And this gives us our final dataset! Explore the income distribution yourself below to learn more!
 
-<iframe src="/html/nepal_census/map2.html" width="100%" height="800px" frameborder="0"></iframe>
+<iframe src="/atlas/html/nepal_census/map2.html" width="100%" height="800px" frameborder="0"></iframe>
