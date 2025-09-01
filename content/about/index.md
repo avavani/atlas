@@ -25,21 +25,21 @@ excludeFromIndex = true
 <div class="gallery-section">
     <h2 class="gallery-header">Featured Projects</h2>
     <div class="gallery-grid">
-        <a href="/posts/nepal_census/" class="gallery-item">
+        <a href="../posts/nepal_census/" class="gallery-item">
             <img src="valmap.png" alt="Map showing Household Wealth Distribution in Kathmandu Valley">
             <div class="gallery-overlay">
                 <h3 class="gallery-title">Unpacking Nepal's Census</h3>
                 <p class="gallery-description">Using data cleaning methods, I converted tabular census data into spatial formats that can be easily mapped.</p>
             </div>
         </a>
-        <a href="/posts/coal-plants/" class="gallery-item">
+        <a href="../posts/coal-plants/" class="gallery-item">
             <img src="coal.png" alt="Map showing distribution of coal plants in America">
             <div class="gallery-overlay">
                 <h3 class="gallery-title">Where are America's Coal Plants?</h3>
                 <p class="gallery-description">A short analysis of the coal industry in America.</p>
             </div>
         </a>
-        <a href="/posts/spotspotter-a-parking-finder/" class="gallery-item">
+        <a href="../posts/spotspotter-a-parking-finder/" class="gallery-item">
             <img src="img3.png" alt="Screenshot from Parking Finder App">
             <div class="gallery-overlay">
                 <h3 class="gallery-title">Spotspotter</h3>

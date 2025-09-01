@@ -3,6 +3,6 @@
     min = "0.115.4"
 
 [params]
-  email="aa.avaniadhikari@gmail.com"
-  dateform="2006-01-01"
-  github = "https://github.com/avavani"   
+email   = "aa.avaniadhikari@gmail.com"
+dateform= "2006-01-02"
+github  = https://github.com/avavani

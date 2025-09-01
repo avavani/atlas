@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html><head>
+<html><head><script src="/atlas/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=atlas/livereload" data-no-instant defer></script>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:image" content="https://avavani.github.io/images/header.png" />
+    <meta property="og:image" content="http://localhost:1313/images/header.png" />
     <meta property="og:title" content="Mapping Household Wealth in Kathmandu" />
     <meta property="og:description" content="
 Tools: Python, R
@@ -11,7 +11,7 @@ Statistically speaking, Nepal is a poor country. It ranks 180/222 in terms of GD
 Almost 42% of the Nation&rsquo;s populations lives in housing made out of galvanized steel. Source: 2021 Nepal Census
 However, such reality seems extremely far away in the capital city of Kathmandu where Teslas frequent the roads. Kathmandu&rsquo;s prosperity isn&rsquo;t new and stems from a list of historic and geographic factors. Situated at 4.6K ft above sea level, the Kathmandu valley is a large swath of fertile flatland in the mountainous Himalayan Range4. Due to this geographic advantange, the region has been continously settled for at least 2000 years 5. The large settlements attracted more people and soon Kathmandu found itself as an important trading hub, linking the India-Tibet land route 6. Kings built roads, waterworks, and schools; merchants traded gold, spices and silk; while pilgrims spread art, region and philosophy. Consequentialy, Kathmandu and its residents grew rich while its surrounding countryside languished into subsistence farming." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://avavani.github.io/atlas/posts/nepal_census/" />
+    <meta property="og:url" content="http://localhost:1313/atlas/posts/nepal_census/" />
     <meta property="og:site_name" content="Atlas" />
 
     <title>Mapping Household Wealth in Kathmandu</title>
@@ -30,7 +30,7 @@ However, such reality seems extremely far away in the capital city of Kathmandu 
         About
     </a></section>
     <section id="social-links" class="header-group">
-        <a href=ZgotmplZ class="header-icon">
+        <a href="" class="header-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github"
                 viewBox="0 0 16 16">
                 <path
@@ -175,7 +175,7 @@ However, such reality seems extremely far away in the capital city of Kathmandu 
 </span></span><span style="display:flex;"><span>folium<span style="color:#f92672">.</span>LayerControl()<span style="color:#f92672">.</span>add_to(m)
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>m
-</span></span></code></pre></div><iframe src="/html/nepal_census/map1.html" width="100%" height="800px" frameborder="0"></iframe>
+</span></span></code></pre></div><iframe src="/atlas/html/nepal_census/map1.html" width="100%" height="800px" frameborder="0"></iframe>
 <h3 id="estimating-income-distribution">Estimating Income Distribution</h3>
 <p>Though the census data doesn&rsquo;t provide us with information on median household income, it is possible to estimate this data using other publicly available government data. The National Statistics Office has information on the median and mean income values for each quartile on their <a href="https://data.nsonepal.gov.np/dataset/b6c3c19b-4b15-44bf-8653-1571e76dad14/resource/d711c2a1-2f5c-47a6-be02-bb4073fe234d?inner_span=True">website</a>.</p>
 <p>I used this information to come up with weighted estimates of median income for each ward using the proportion of quantile distribution.</p>
@@ -202,7 +202,7 @@ However, such reality seems extremely far away in the capital city of Kathmandu 
 </span></span><span style="display:flex;"><span>main_city[<span style="color:#e6db74">&#39;Est Income&#39;</span>] <span style="color:#f92672">=</span> 
 </span></span><span style="display:flex;"><span>    pd<span style="color:#f92672">.</span>to_numeric((main_city[<span style="color:#e6db74">&#39;Est Income&#39;</span>])<span style="color:#f92672">/</span><span style="color:#ae81ff">100000</span>)<span style="color:#f92672">.</span>round(<span style="color:#ae81ff">1</span>)
 </span></span></code></pre></div><p>And this gives us our final dataset! Explore the income distribution yourself below to learn more!</p>
-<iframe src="/html/nepal_census/map2.html" width="100%" height="800px" frameborder="0"></iframe>
+<iframe src="/atlas/html/nepal_census/map2.html" width="100%" height="800px" frameborder="0"></iframe>
     </div>
 </section>
 
